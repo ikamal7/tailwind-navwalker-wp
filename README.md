@@ -20,18 +20,27 @@ To use Tailwind Navwalker in your WordPress theme, follow these steps:
 2.  Save the file in your WordPress theme directory, usually `wp-content/themes/your-theme/`
 3.  Include the class in your theme's `functions.php` file by adding the following line:
 
-phpCopy code
 
-`require_once get_template_directory() . '/tailwind-navwalker.php';`
+
+```require_once get_template_directory() . '/tailwind-navwalker.php';```
 
 Usage
 -----
 
 To display the menu in your theme, you can use the following code in your template file:
 
-phpCopy code
 
-`<?php   wp_nav_menu( array(     'theme_location'  => 'primary',     'container'       => false,     'menu_class'      => '',     'fallback_cb'     => '',     'menu_id'         => 'main-menu',     'walker'          => new Tailwind_Navwalker(),   ) );   ?>`
+
+```
+<?php wp_nav_menu([
+    "theme_location" => "primary",
+    "container" => false,
+    "menu_class" => "",
+    "fallback_cb" => "",
+    "menu_id" => "main-menu",
+    "walker" => new Tailwind_Navwalker(),
+]); ?>
+```
 
 Customization
 -------------
